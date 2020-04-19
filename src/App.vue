@@ -1,17 +1,51 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    
+    <h1>Hola</h1>
+
+    <nav>
+      <ul>
+        <li>
+
+          <router-link to="/test">
+            Test
+          </router-link>
+
+         <!-- lo de arriba es como un href pero de vue
+              <a href="#">Test</a> --> 
+
+        </li>
+
+        <li>
+
+          <router-link to="/">
+            Users
+          </router-link>
+
+          <!-- <a href="#">User</a> -->
+
+        </li>
+      </ul>
+    </nav>
+
+     
+    <hr>
+    <router-view></router-view>
+    
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+//importamos los archivos para que los muestre
+import test from './components/test.vue';
+import user from "./components/user";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    test,
+    user
   }
 }
 </script>
